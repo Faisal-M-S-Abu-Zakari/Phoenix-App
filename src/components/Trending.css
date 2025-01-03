@@ -1,0 +1,108 @@
+.trending-section {
+  padding: 10px 50px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: "Agbalumo", system-ui;
+  font-size: 30px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s;
+  color: linear-gradient(#fdc746, #c86c02);
+}
+
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #fdc746;
+  text-decoration: none;
+}
+
+.show-more-btn:hover {
+  border-bottom: 2px solid #fdc746;
+}
+.movie-poster {
+  cursor: pointer;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 32px 48px rgba(132, 139, 200, 0.18);
+  transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+  height: 380px;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2); /* Lightness filter for hover effect */
+  box-shadow: 0 16px 32px rgba(132, 139, 200, 0.3);
+}
+
+.card-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.card-title:hover {
+  color: #fdc746; /* Accent color on hover */
+}
+
+.movie-poster img {
+  width: 180px !important;
+  height: 270px !important;
+  border-radius: 15px !important;
+  box-shadow: 0 32px 48px rgba(132, 139, 200, 0.18) !important;
+  transition: 0.3s all !important;
+}
+
+.movie-poster:hover img {
+  box-shadow: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .movie-poster img {
+    width: 150px;
+    height: 225px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .movie-poster img {
+    width: 130px;
+    height: 195px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+}

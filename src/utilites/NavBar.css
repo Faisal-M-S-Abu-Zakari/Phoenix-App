@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.navBar {
+  font-family: "Akatab", serif;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid black;
+}
+.navBar .light {
+  background-color: #ffffff;
+  color: #322d2d;
+}
+.navBar .dark {
+  background-color: #322d2d;
+  color: #ffffff;
+}
+.custom-burger {
+  padding: 0.5rem; /* Adjust padding if needed */
+}
+
+.custom-burger .navbar-toggler-icon {
+  width: 30px; /* Set the width of the lines */
+  height: 24px; /* Set the height of the icon container */
+  position: relative;
+}
+
+.custom-burger .navbar-toggler-icon::before,
+.custom-burger .navbar-toggler-icon::after,
+.custom-burger .navbar-toggler-icon span {
+  content: "";
+  display: block;
+  width: 100%; /* Match the width of the container */
+  height: 3px; /* Thickness of the lines */
+  background-color: white; /* Change color of the lines */
+  border-radius: 2px; /* Add rounded edges */
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease; /* Add smooth animations */
+}
+
+.custom-burger .navbar-toggler-icon::before {
+  top: 0; /* Position the first line at the top */
+}
+
+.custom-burger .navbar-toggler-icon::after {
+  bottom: 0; /* Position the third line at the bottom */
+}
+
+.custom-burger .navbar-toggler-icon span {
+  top: 50%; /* Center the middle line */
+  transform: translateY(-50%);
+  background-color: white; /* Change color for the second line */
+  width: 100%; /* Adjust width (e.g., shorter than top and bottom lines) */
+  margin-left: auto; /* Align to the right */
+}
+
+.links,
+.dropdown-toggle {
+  font-size: 1.2rem;
+  color: #000;
+}
+.custom-dropdown .dropdown-menu {
+  width: 500px;
+  background-color: #fcf9f7;
+  padding: 0;
+  box-shadow: 0 32px 48px rgba(132, 139, 200, 0.18);
+  padding: 10px;
+  background-color: #fcf9f7;
+  box-shadow: 0 32px 48px rgba(132, 139, 200, 0.18);
+  top: 50px;
+}
+
+.custom-dropdown-item {
+  display: inline-block;
+  font-family: "Akatab", sans-serif;
+  font-size: 16px;
+  width: 230px;
+  font-weight: 600;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  padding: 10px;
+  text-align: center;
+  background-color: transparent !important;
+  color: inherit;
+  transition: background-color 0.3s ease;
+}
+.custom-dropdown-item .item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.2s all;
+  text-decoration: none;
+  font-size: 18px;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  color: #322d2d;
+  padding: 5px 20px;
+}
+.custom-dropdown-item .item:hover {
+  color: #f9ac23;
+  box-shadow: 0 32px 48px rgba(132, 139, 200, 0.18);
+}
+
+.links:hover,
+.dropdown-toggle:hover {
+  color: #f9ac23 !important;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light .navbar-light .navbar-nav .nav-link {
+  color: #000;
+}
+
+.light .navbar-light .navbar-nav .nav-dropdown-item {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark .navbar-dark .navbar-nav .nav-link,
+.dark .dropdown-toggle {
+  color: #fff;
+}
+
+.dark .navbar-dark .navbar-nav .nav-dropdown-item {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.search-bar-div {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.bi-search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 18px;
+  color: var(--color-grey2);
+  cursor: pointer;
+}
+
+.search-bar-div input {
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding: 10px 35px;
+  width: 250px;
+  border-radius: 50px;
+  background-color: var(--color-grey1);
+}
+
+.search-bar-div input::placeholder {
+  font-size: 15px;
+  color: var(--color-grey3);
+}
+.theme-toggle-icon {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.theme-toggle-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.icon {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon.fa-moon {
+  transform: rotate(0deg);
+}
+
+.icon.fa-sun {
+  transform: rotate(180deg); /* Add a spin effect for the sun icon */
+}

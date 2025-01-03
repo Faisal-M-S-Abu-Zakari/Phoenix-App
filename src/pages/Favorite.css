@@ -1,0 +1,11 @@
+.empty-list-container {
+  height: 50vh; /* Adjust to center vertically */
+  text-align: center;
+}
+
+.empty-list-text {
+  font-size: 100px;
+  font-family: "Afacad", sans-serif;
+  color: #c86c02;
+  font-weight: bold;
+}

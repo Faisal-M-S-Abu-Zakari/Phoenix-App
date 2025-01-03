@@ -1,0 +1,21 @@
+/* Smooth transition for background color */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease; /* For smooth background and text color transition */
+}
+
+/* Light theme background and text */
+.light {
+  background-color: #f8f9fa; /* Light background */
+  color: black; /* Dark text color for light theme */
+}
+
+/* Dark theme background and text */
+.dark {
+  background-color: #322d2d; /* Dark background */
+  color: white; /* White text color for dark theme */
+}
+
+/* HomePage specific styles */
+.homePage {
+  background-color: #fcf9f7;
+}
