@@ -1,7 +1,7 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
-import './Trending.css';
+import React from "react";
+import { Card } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import "./Trending.css";
 
 const MovieCard = (props) => {
   const { title, path } = props;
@@ -14,7 +14,7 @@ const MovieCard = (props) => {
 
   return (
     <Card
-      className="movie-poster p-3 border-0 text-center"
+      className="movie-poster p-3 border-0 text-center mb-3 "
       style={{
         backgroundColor: cardBackgroundColor,
         color: textColor,

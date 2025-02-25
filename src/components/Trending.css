@@ -13,11 +13,10 @@
 .section-title {
   font-family: "Agbalumo", system-ui;
   font-size: 30px;
+  background: linear-gradient(#fdc746, #c86c02);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background 0.3s;
-  color: linear-gradient(#fdc746, #c86c02);
 }
 
 .show-more-btn {
@@ -35,6 +34,7 @@
 .show-more-btn:hover {
   border-bottom: 2px solid #fdc746;
 }
+
 .movie-poster {
   cursor: pointer;
   border-radius: 15px;
@@ -46,32 +46,16 @@
 
 .movie-poster:hover {
   transform: scale(1.05);
-  filter: brightness(1.2); /* Lightness filter for hover effect */
+  filter: brightness(1.2);
   box-shadow: 0 16px 32px rgba(132, 139, 200, 0.3);
 }
 
-.card-poster {
+.movie-poster img {
   width: 100%;
   height: auto;
   border-radius: 15px;
-}
-
-.card-title {
-  font-weight: bold;
-  margin-top: 10px;
-  transition: color 0.3s ease;
-}
-
-.card-title:hover {
-  color: #fdc746; /* Accent color on hover */
-}
-
-.movie-poster img {
-  width: 180px !important;
-  height: 270px !important;
-  border-radius: 15px !important;
-  box-shadow: 0 32px 48px rgba(132, 139, 200, 0.18) !important;
-  transition: 0.3s all !important;
+  box-shadow: 0 32px 48px rgba(132, 139, 200, 0.18);
+  transition: 0.3s all;
 }
 
 .movie-poster:hover img {
@@ -97,9 +81,16 @@
 }
 
 @media (max-width: 576px) {
+  .section-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .movie-poster {
+    height: 300px;
+  }
   .movie-poster img {
-    width: 130px;
-    height: 195px;
+    width: 100px;
+    height: 150px;
   }
 
   .section-title {
