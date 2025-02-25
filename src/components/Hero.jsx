@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import ModalPage from "../pages/Modal";
 import { useSelector } from "react-redux";
+import SearchPage from "./../pages/SearchPage";
 
 const Hero = () => {
   const [query, setQuery] = useState("");
@@ -59,40 +60,42 @@ const Hero = () => {
               <Image src={cut} alt="cut" style={{ width: "50px" }} />
             </p>
 
-            {/* Search Bar */}
-            <div className="search-bar d-flex flex-column flex-md-row align-items-center justify-content-center">
-              <Link to={`/search/${query}`} className="search-icon">
-                <FontAwesomeIcon icon={faSearch} className="icon" />
-              </Link>
-              <Form.Control
-                className="input"
-                type="text"
-                placeholder="Search here ..."
-                onChange={(e) => setQuery(e.target.value)}
-              />
-            </div>
+            <div className="SearchDiv">
+              {/* Search Bar */}
+              <div className="search-bar d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <Link to={`/search/${query}`} className="search-icon">
+                  <FontAwesomeIcon icon={faSearch} className="icon" />
+                </Link>
+                <Form.Control
+                  className="input"
+                  type="text"
+                  placeholder="Search here ..."
+                  onChange={(e) => setQuery(e.target.value)}
+                />
+              </div>
 
-            {/* Search Results */}
-            {query.length > 0 && (
-              <ul className="search-res-list">
-                {searchRes.slice(0, 6).map((item, index) => (
-                  <li
-                    key={index}
-                    className="search-res-item"
-                    onClick={() => handleMovieClick(item)}
-                  >
-                    <div className="d-flex align-items-center">
-                      <Image
-                        src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                        alt="poster"
-                        className="search-res-img"
-                      />
-                      <p className="search-res-title">{item.title}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            )}
+              {/* Search Results */}
+              {query.length > 0 && (
+                <ul className="search-res-list">
+                  {searchRes.slice(0, 6).map((item, index) => (
+                    <li
+                      key={index}
+                      className="search-res-item"
+                      onClick={() => handleMovieClick(item)}
+                    >
+                      <div className="d-flex align-items-center">
+                        <Image
+                          src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                          alt="poster"
+                          className="search-res-img"
+                        />
+                        <p className="search-res-title">{item.title}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
             {/* Modal for Selected Movie */}
             {selectedMovie && (
