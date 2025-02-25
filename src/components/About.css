@@ -47,6 +47,7 @@ h1 {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .about {
+    margin-top: 80px;
     flex-direction: column;
     text-align: center;
   }
