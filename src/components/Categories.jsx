@@ -1,24 +1,19 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "./Category.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./Category.css";
 
-function Categories(props) {
+function Categories({ Categories }) {
   const theme = useSelector((state) => state.movies.theme);
-  // Set background color based on the theme
-  const backgroundColor = theme === "light" ? "transparent" : "#322d2d"; // Dark background for dark mode
-  console.log(theme);
+  const backgroundColor = theme === "light" ? "transparent" : "#322d2d";
 
   return (
-    <section
-      className="category-section"
-      style={{ backgroundColor: backgroundColor }}
-    >
+    <section className="category-section" style={{ backgroundColor }}>
       <h2 className="section-title">Movie Categories</h2>
       <Container>
-        <Row className=" category-div ">
-          {props.Categories.map((category) => (
+        <Row className="category-div">
+          {Categories.map((category) => (
             <Col
               key={category.id}
               xs={12}
@@ -27,10 +22,7 @@ function Categories(props) {
               lg={3}
               className={`category-card ${theme}`}
             >
-              <Link
-                to={`search/${category.id}`}
-                style={{ textDecoration: "none", color: "white" }}
-              >
+              <Link to={`/search/${category.id}`} className="category-link">
                 <h4>{category.name}</h4>
               </Link>
             </Col>
