@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import ModalPage from "../pages/Modal";
 import { useSelector } from "react-redux";
-import SearchPage from "./../pages/SearchPage";
 
 const Hero = () => {
   const [query, setQuery] = useState("");
@@ -76,7 +75,15 @@ const Hero = () => {
 
               {/* Search Results */}
               {query.length > 0 && (
-                <ul className="search-res-list">
+                <ul
+                  className="search-res-list"
+                  style={{
+                    color: textColor,
+                    backgroundColor,
+                    border:
+                      theme === "light" ? "1px solid #ddd" : "1px solid #444",
+                  }}
+                >
                   {searchRes.slice(0, 6).map((item, index) => (
                     <li
                       key={index}
