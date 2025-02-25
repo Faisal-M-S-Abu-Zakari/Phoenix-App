@@ -2,15 +2,17 @@
   max-width: 80%; /* Adjust the percentage as needed */
   width: 80%; /* This ensures the modal width scales */
 }
+
 .popup {
   width: 100%;
   height: 100%;
 }
+
 .popup-content {
   display: flex;
   height: calc(100vh - 90px);
   justify-content: space-between;
-  font-family: "Agbalumo" , system-ui;
+  font-family: "Agbalumo", system-ui;
   padding: 20px;
   border-radius: 8px;
   width: 100%;
@@ -32,7 +34,7 @@
 }
 
 .popup-content .right-side .tittle {
-  font-family:"Agbalumo", system-ui;
+  font-family: "Agbalumo", system-ui;
   height: 10%;
   display: flex;
   flex-direction: column;
@@ -67,7 +69,6 @@
   margin-left: 10px !important;
 }
 
-
 .popup-content .right-side p {
   font-family: "Afacad", sans-serif;
   color: #322d2d;
@@ -76,7 +77,7 @@
   margin-top: 50px;
   font-weight: 400;
   height: 50%;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .popup-content .right-side .glow-button {
@@ -87,22 +88,22 @@
   justify-content: center;
   border: 1px solid #f9ac23;
   background-color: #e3e3e3;
-  color:#322d2d;
+  color: #322d2d;
   font-size: 20px;
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
   background-color: transparent;
-  /* margin-top: 60px !important; */
-  /* Button color */
   position: relative;
   overflow: hidden;
   transition: transform 0.3s;
 }
-.popup-content .right-side .btn{
+
+.popup-content .right-side .btn {
   background-color: #f9ac23;
   color: #e3e3e3;
 }
+
 .glow-button:before {
   content: "";
   position: absolute;
@@ -123,21 +124,24 @@
   height: 400%;
   opacity: 1;
 }
-.popup-content .right-side .glow-button:hover{
-  background-color:rgba(249, 172, 35, 0.8) ;
+
+.popup-content .right-side .glow-button:hover {
+  background-color: rgba(249, 172, 35, 0.8);
 }
 
-.glow-button .clicked{
-  color:#fff;
+.glow-button .clicked {
+  color: #fff;
 }
+
 .glow-button span {
   position: relative;
   z-index: 1;
-  color:#f9ac23;
+  color: #f9ac23;
   font-size: 16px;
 }
+
 .glow-button:hover span {
-  color:#322d2d;
+  color: #322d2d;
 }
 
 .popup-content .right-side button i {
@@ -149,17 +153,84 @@
 }
 
 .popup-content .right-side button:hover i {
-  color:#322d2d;
+  color: #322d2d;
 }
-.popup-content .right-side .clickIcon{
-  color:#fff;
+
+.popup-content .right-side .clickIcon {
+  color: #fff;
 }
+
 .popup-content .right-side button.toggleFavorite {
-  background-color:rgba(249, 172, 35, 0.8) ;
+  background-color: rgba(249, 172, 35, 0.8);
 }
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .custom-modal .modal-dialog {
-    max-width: 95%; /* For responsiveness */
+    max-width: 95%;
     width: 95%;
+  }
+
+  .popup-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding: 15px;
+  }
+
+  .popup-content .right-side {
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .popup-content .right-side p {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .popup-content .right-side .tittle h2 {
+    font-size: 24px;
+  }
+
+  .popup-content .right-side .rating {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .popup-content .right-side .rating .imdb,
+  .popup-content .right-side .rating .score {
+    font-size: 16px;
+  }
+
+  .popup-content img {
+    width: 70vw;
+    height: 20vh;
+  }
+
+  .popup-content .right-side .glow-button {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .popup-content .right-side button i {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup-content .right-side .glow-button {
+    font-size: 16px;
+  }
+
+  .popup-content .right-side .rating .imdb,
+  .popup-content .right-side .rating .score {
+    font-size: 14px;
+  }
+
+  .popup-content .right-side p {
+    font-size: 16px;
   }
 }
